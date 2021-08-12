@@ -51,10 +51,14 @@ class LinkedList:
     def insertAtEnd(self, data):
         """Insert an element at the end of the list"""
         node = Node(data)
+        if self.head is None:
+            self.inserAtStart(data)
+            return
         temp = self.head
         while temp.next is not None:
             temp = temp.next
         temp.next = node
+        self.length += 1
 
     def removeData(self, data):
         """Removes an element from the list"""
@@ -63,6 +67,7 @@ class LinkedList:
                 self.head = self.head.next
             else:
                 self.head.remove(data, self.head)
+        self.length -= 1
 
     def traverseList(self):
         """Traverse the list"""
@@ -78,7 +83,7 @@ class LinkedList:
 
 if __name__ == '__main__':
     linkedList = LinkedList()
-    linkedList.inserAtStart(1)
+    linkedList.insertAtEnd(1)
     linkedList.inserAtStart(2)
     linkedList.insertAtEnd(3)
     linkedList.insertAtEnd(4)
