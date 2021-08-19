@@ -1,0 +1,26 @@
+Balanced BST->we can achieve O(logN) time complexity for
+several operarions including search.
+Array:If we know the index,The insertion and retrieval
+operation are very fast O(1).That is what we are after.
+Here we want to search for a giver item with a given key.
+we have  key-value pair key--------->slote in a set of
+buckets.Problem:keys are always nnonnegative integers.
+we have to do,,,prehashing in order to map strings keys
+to index of an array.How can we map a certain key to a
+slot in our array? h(x) hash function is needed.Hashing:
+we can map a certain key of any type to a random array
+index.Collisions when we map two keys to the same bucket.
+Resolve Collision #1:Chaiing:we can store both values at the
+same bucket using linked list.
+Resolve Collision #2:Open addressing:we generate a new index
+for the item.
+Hash Function:Distributes the keys uniformly into buckets.
+n:number of keys
+m:number of buckets//size of array
+h(x)=n%m(modulo operator).
+we should use prime numbers for both the size of the array and
+in our hash function to make sure the distributoin will be
+unique.
+String keys:we could calculate the ascii value for each charater
+add them up ->make % modulo.
+String => HashCode => index

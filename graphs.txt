@@ -1,0 +1,21 @@
+2 types->Directed and undirected graphs.
+Hamiltonian path-It's a path in an undirected 
+graph that visits each vertex exactly once.Hamiltonian
+cycle is a hamiltonian path that is a cycle.
+Determining wether such paths and cycles exists in a graph
+is NP-complete.We use simulations to solve the problem.
+Travelling salesman problem relies on Hamiltonian cycles
+TSP Problem:given a list of cities and the distances between
+each pair of cities,what is the shortest possible route that
+visits each city exactly once and returns to the original city.
+If there is a hamiltonian path for graph:it's the solution for
+the TSP.
+Eulerian path-It's a trail in a graph which visits every
+edge ecaxtly once.Eulerian cycle is a Eulerian trail which
+starts and ends on the same vertex.An undirected graph has
+an eulerian cycle if and only if every vertex has even degree.
+We can construct graphs that has eulerian cycles with Heirhozler
+algorith.important for the cinese postman p[roblem.
+Cinese postman problem:a postman needs to go through every street
+at least once+closed circuit+wants to find shortest path.
+If there is a eulerian cycle that is the solution fot the cpp. 
